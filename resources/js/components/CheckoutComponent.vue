@@ -16,7 +16,7 @@
                             <tbody>
                                 <tr v-for="cart in carts" v-bind:key="cart.id">
                                     <td>{{ cart.name }}</td>
-                                    <td>Rp. {{ cart.price }}</td>
+                                    <td>Rp.{{ cart.price }}</td>
                                     <td>{{ cart.amount }}</td>
                                 </tr>
                             </tbody>

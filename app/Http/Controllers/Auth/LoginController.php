@@ -21,7 +21,7 @@ class LoginController extends Controller
     }
 
     //added below
-    /*
+    
     public function authenticated($user)
     {
        if(!$user->verified){
@@ -33,7 +33,7 @@ class LoginController extends Controller
                     code, please check your email.');
         }
         return redirect()->intended($this->redirectPath());
-    }*/
+    }
 
     //facebook
     public function redirectToFacebook()

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+
 <div class="container">
 
 @if($message = Session::get('success'))
@@ -90,7 +91,7 @@
 		if(total == number){
 			$('.selectall').prop('checked', true);
 			$('.selectall2').prop('checked', true);
-		} else{
+		}else{
 			$('.selectall').prop('checked', false);
 			$('.selectall2').prop('checked', false);
 		}

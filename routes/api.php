@@ -22,3 +22,5 @@ Route::resource('products','ProductController');
 Route::post('/rating/new','DetailController@setrating')->name('setrating');
 Route::get('/rating/{id}','DetailController@getrating')->name('getrating');//for review refer part 29
 Route::get('/product/search','DetailController@search');//search using vue
+
+Route::get('/resturants','ResturantController@index');

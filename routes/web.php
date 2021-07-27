@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function(){
+//spa in vue
+Route::get('/product', function(){
     return view('product');
 });//comment this if not using vuejs
 
@@ -36,6 +37,11 @@ Route::get('/login/google/callback','Auth\LoginController@handleGoogleCallback')
 
 //checkout
 Route::get('/checkout','CheckoutController@index')->name('checkout');
-//Route::get('/checkout/stripe', 'CheckoutController@stripe')->name('stripe');
-//Route::post('/checkout/stripepayment', 'CheckoutController@stripePayment')->name('stripepayment');
+Route::get('/checkout/stripe', 'CheckoutController@stripe')->name('stripe');
+Route::post('/checkout/stripepayment', 'CheckoutController@stripePayment')->name('stripepayment');
 Route::get('/detail/{id}', 'DetailController@detail')->name('detail');
+
+
+Route::get('/resturant',function(){
+    return view('maps');
+});

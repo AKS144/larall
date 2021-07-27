@@ -37,6 +37,22 @@
     <!--reCaptcha scripts-->
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <!--end-->
+
+
+    <!--Maps-->
+
+
+<!--Style for Maps-->
+    <style>
+    html,body{
+        background-color: #fff;
+        color: #636b6f;
+        font-family: 'Nunito', sans-serif;
+        font-weight: 200;
+        height: 100vh;
+        margin: 1rem 2rem;
+    }
+</style>
 </head>
 <body>
     <div id="app">
@@ -97,8 +113,8 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            @yield('content')           
         </main>
-    </div>
+    </div>    
 </body>
 </html>

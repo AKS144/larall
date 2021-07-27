@@ -32,12 +32,11 @@ class CheckoutController extends Controller
             'currency' => 'inr',
             'description' => 'Your product info',
             'source' => $request->get('stripeToken'),
-            'receipt_email' => $request->get('email'),
+            'receipt_email' => $request->input('email'),
             'metadata' => [
                 'order_id' => 2456,
             ]
         ]);
-
         // save your customer order to database here
         return back()->with('success_message', 'Thank you! your payment has been accepted');
     }

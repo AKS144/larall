@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\posts;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -14,7 +15,7 @@ class PostController extends Controller
     public function index()
     {
         //$posts = DB::select('select * from posts');
-        $posts = DB::table('posts')->paginate(10);
+        $posts = DB::table('posts')->latest('id')->paginate(10);
         return view('index',['posts'=> $posts]);
     }
 
@@ -85,8 +86,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         $posts = DB::delete('delete from posts where id=?',[$id]);
-        $red = redirect('posts');
-        return $red;
+        return redirect('posts');
     }
 
     public function deleteAll(Request $request){
