@@ -32,7 +32,7 @@ class CheckoutController extends Controller
             'currency' => 'inr',
             'description' => 'Your product info',
             'source' => $request->get('stripeToken'),
-            'receipt_email' => $request->input('email'),
+          //  'receipt_email' => $request->get('email'),
             'metadata' => [
                 'order_id' => 2456,
             ]

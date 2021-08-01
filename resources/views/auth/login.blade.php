@@ -77,7 +77,7 @@
                     </form>
                     <p>
                         <a href="{{ route('fblogin') }}" class="btn btn-primary">Login with Facebook</a>
-                        <a href="{{ route('fblogin') }}" class="btn btn-success">Login with Facebook</a>
+                        <a href="{{ route('fblogin') }}" class="btn btn-success">Login with Twitter</a>
                         <a href="{{ route('gologin') }}" class="btn btn-danger">Login with google</a>
                     </p>
                 </div>

@@ -1,5 +1,3 @@
-
-
 //const { default: Vue } = require('vue');//disabled in 28 part for star-rating
 
 require('./bootstrap');
